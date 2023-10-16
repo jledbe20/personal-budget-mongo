@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- This is an SEO Change -->
+  <title>Contact | Jon Ledbetter</title>
+  <meta name="description" content="Contact page for an incomplete personal site">
+  <meta name="keywords" content="construction in-progress web-development contact portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/fade.css">
+  <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+
+  <nav id="masthead">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/login.html">Login</a></li>
+      <li><a href="/chart.html">Chart.js</a></li>
+      <li><a href="/new_chart.html">DJ3S Chart</a></li>
+      <li><a href="https://jtledbet.github.io/portfolio.html">Other Projects</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <!-- <li><a href="https://google.com">Google</a></li> -->
+    </ul>
+  </nav>
+
+  <div id="main-container" class="container">
+    <section class="main-section">
+      <h1 class="header">Contact</h1>
+
+      <!-- This is an A11y Change -->
+      <form id="contact-form" role="contact form" action="mailto:jon.ledbetter@gmail.com" method="post"
+        enctype="text/plain">
+        <ul>
+          <li>
+            <label for="name">Name</label>
+            <input class="text-light bg-dark" type="text" id="name" name="name" placeholder="John Smith"
+              required="required">
+          </li>
+          <li>
+            <label for="email">E-mail</label>
+            <input class="text-light bg-dark" type="email" id="email" name="email" placeholder="example@gmail.com"
+              required="required">
+          </li>
+          <li>
+            <label for="message">Message</label>
+            <textarea class="text-light bg-dark" id="message" name="message" required="required"></textarea>
+          </li>
+        </ul>
+
+        <!-- This is an A11y Change -->
+        <div id="buttons">
+          <input class="button" role="submit" type="submit" id="submit" value="Send">
+          <input class="button" role="reset" type="reset" id="reset" value="Reset">
+        </div>
+      </form>
+      <br>
+    </section>
+  </div>
+
+  <footer id="footer" class="bottom container">
+    <div class="center">
+      All rights reserved &copy; Jon Ledbetter
+    </div>
+  </footer>
+
+</body>
+
+</html>

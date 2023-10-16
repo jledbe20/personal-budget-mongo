@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is an SEO Change -->
+    <title>ITIS-5166 | Jon Ledbetter</title>
+    <meta name="description" content="An incomplete personal homepage">
+    <meta name="keywords" content="construction in-progress web-development portfolio">
+
+    <!-- This is an SEO Change -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/pb/public/sitemap.xml">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/fade.css">
+
+</head>
+
+<body>
+
+    <a href="#main" class="skip">Skip to content</a>
+
+    <nav id="masthead">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="/chart.html">Chart.js</a></li>
+            <li><a href="/new_chart.html">DJ3S Chart</a></li>
+            <li><a href="https://jtledbet.github.io/portfolio.html">Other Projects</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <!-- <li><a href="https://google.com">Google</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1 id="myH1">Personal Webpage</h1>
+        <h2 onclick="changeTitle()">My own little corner of the internet</h2>
+        <!-- This is an A11y Change -->
+        <img id="puter_img" alt="a boxy little computer from the 1980's" src="assets/images/puter.jpg"
+            class="center_img"></img>
+    </div>
+
+    <main class="center" id="main">
+
+        <div class="page-area">
+            <!-- This is a Semantic HTML Change -->
+            <aside id="disclaimer">
+                <h1>Disclaimer</h1>
+                <p>This site is a work in progress for ITIS 5166 - Network-based Application Development. As such, it
+                    will be varying degrees of ugly and dysfunctional for the next few months.</p>
+            </aside>
+
+            <!-- This is a Semantic HTML Change -->
+            <!-- <table class="center">
+                <tr>
+                    <th>Course</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Competitive Cyberdefense</td>
+                    <td>Information Ethics and Policy</td>
+                    <td>Penetration Testing</td>
+                </tr>
+                <tr>
+                    <td>98.9%</td>
+                    <td>102%</td>
+                    <td>99%</td>
+                </tr>
+            </table> -->
+
+            <article>
+                <h1>Stay on track</h1>
+                <p>
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </article>
+
+            <article>
+                <h1>Alerts</h1>
+                <p>
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </article>
+
+            <article>
+                <h1>Results</h1>
+                <p>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear...
+                    because they know it is all good and accounted for.
+                </p>
+            </article>
+
+            <article>
+                <h1>Free</h1>
+                <p>
+                    This app is free!!! And you are the only one holding your data!
+                </p>
+            </article>
+
+            <article>
+                <h1>Stay on track</h1>
+                <p>
+                    Do you know where you are spending your money? If you really stop to track it down,
+                    you would get surprised! Proper budget management depends on real data... and this
+                    app will help you with that!
+                </p>
+            </article>
+
+            <article>
+                <h1>Alerts</h1>
+                <p>
+                    What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
+                </p>
+            </article>
+
+            <article>
+                <h1>Results</h1>
+                <p>
+                    People who stick to a financial plan, budgeting every expense, get out of debt faster!
+                    Also, they to live happier lives... since they expend without guilt or fear...
+                    because they know it is all good and accounted for.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <footer id="footer" class="bottom container">
+        <div class="center">
+            All rights reserved &copy; Jon Ledbetter
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+        integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"
+        integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function changeTitle() {
+            var h1 = document.getElementById('myH1');
+            h1.innerHTML = "You clicked the subheader.";
+        }
+    </script>

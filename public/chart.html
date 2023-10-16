@@ -1,0 +1,82 @@
+<div id="chartContainer">
+    <canvas id="myChart"></canvas>
+</div>
+
+<style>
+    #chartContainer {
+        width: 960px;
+        height: 500px;
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"
+    integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@1.5.1/dist/axios.min.js"></script>
+
+<script>
+
+    // instantiate the chart
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chartData = {
+        datasets: [{
+            data: [],
+            // backgroundColor: ['#ffcd56', '#ff6384', '#36a2eb', '#fd6b19', '#a05d56', '#d0743c', '#98abc5', '#8a89a6', '#7b6888', '#6b486b']
+        }],
+        labels: []
+    };
+
+    // fetch budget data from the server
+    function fetchDataAndUpdateChart() {
+        // clear array values:
+        chartData.labels = [];
+        chartData.datasets[0].data = [];
+        chartData.datasets[0].backgroundColor = [];
+
+        axios.get('http://localhost:3000/budget')
+            .then(response => {
+                // log the response here
+                console.log("Received data from server:", response.data);
+                const fetchedData = response.data;
+
+                // look for broken entries:
+                fetchedData.forEach(item => {
+                    console.log("Processing this item:", item);
+                    if (item.title) {
+                        chartData.labels.push(item.title);
+                    } else {
+                        console.error("Title missing in item:", item);
+                    }
+
+                    if (item.value) {
+                        chartData.datasets[0].data.push(item.value);
+                    } else {
+                        console.error("Value missing in item:", item);
+                    }
+
+                    if (item.color) {
+                        chartData.datasets[0].backgroundColor.push(item.color);
+                    } else {
+                        console.error("Color missing in item:", item);
+                    }
+                });
+
+                // generate the chart.
+                var myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: chartData,
+                    options: {
+                        maintainAspectRatio: false,
+                    }
+                });
+
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }
+
+    // call the function on page load.
+    fetchDataAndUpdateChart();
+
+</script>
