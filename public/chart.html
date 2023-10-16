@@ -1,3 +1,16 @@
+<nav id="masthead">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/login.html">Login</a></li>
+        <li><a href="/chart.html">Chart.js</a></li>
+        <li><a href="/new_chart.html">DJ3S Chart</a></li>
+        <li><a href="https://jtledbet.github.io/portfolio.html">Other Projects</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <!-- <li><a href="https://google.com">Google</a></li> -->
+    </ul>
+</nav>
+
 <div id="chartContainer">
     <canvas id="myChart"></canvas>
 </div>
@@ -9,13 +22,16 @@
     }
 </style>
 
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/fade.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js"
     integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios@1.5.1/dist/axios.min.js"></script>
 
 <script>
-
     // instantiate the chart
     var ctx = document.getElementById('myChart').getContext('2d');
     var chartData = {
