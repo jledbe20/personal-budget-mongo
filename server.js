@@ -16,11 +16,6 @@ app.use(cors());
 app.use('/', express.static('public'));
 app.use(express.json());
 
-// const budget_file = require("./budget.json");
-// const budget_file2 = require("./budget2.json");
-// var budget = budget_file;
-// var budget2 = budget_file2;
-
 const url = 'mongodb://localhost:27017/budget';
 
 mongoose.connect(url, {
